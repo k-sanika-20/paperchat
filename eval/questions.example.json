@@ -1,0 +1,76 @@
+[
+  {
+    "note": "TYPE 1 - LOOKUP. A specific number, name or acronym. BM25 should win these, because rare literal tokens are exactly what it scores highly. If you have none of these, hybrid retrieval cannot show any advantage over pure embeddings.",
+    "question": "What accuracy did the 1D-CNN baseline reach on the mixed-load setting?",
+    "source": "btp1_stgnn.pdf",
+    "gold_pages": [8]
+  },
+  {
+    "note": "TYPE 1 - LOOKUP",
+    "question": "Which dataset were the bearing fault experiments run on?",
+    "source": "btp1_stgnn.pdf",
+    "gold_pages": [4, 5]
+  },
+  {
+    "note": "TYPE 2 - PARAPHRASE. The wording deliberately does NOT match the paper. Embeddings should win these. Ask it the way you would ask a colleague, not the way the paper phrases it.",
+    "question": "How did the authors check that their model actually works?",
+    "source": "btp1_stgnn.pdf",
+    "gold_pages": [7]
+  },
+  {
+    "note": "TYPE 2 - PARAPHRASE",
+    "question": "Why did they choose a graph over a plain sequence model?",
+    "source": "btp1_stgnn.pdf",
+    "gold_pages": [6]
+  },
+  {
+    "note": "TYPE 3 - MULTI-PAGE. The answer is genuinely spread across pages. Tests whether retrieval brings back more than one relevant passage rather than fixating on the best single match.",
+    "question": "What preprocessing was applied to the raw vibration signals?",
+    "source": "btp1_stgnn.pdf",
+    "gold_pages": [5, 6]
+  },
+  {
+    "note": "TYPE 4 - CROSS-DOCUMENT DISCRIMINATION. Both your papers discuss neural networks; only one discusses this. Tests whether retrieval picks the right paper, not just the right topic.",
+    "question": "What physics-based constraint is added to the loss function?",
+    "source": "btp2_pignn.pdf",
+    "gold_pages": [7]
+  },
+  {
+    "note": "TYPE 4 - CROSS-DOCUMENT",
+    "question": "Which aircraft wing dataset was used?",
+    "source": "btp2_pignn.pdf",
+    "gold_pages": [3]
+  },
+  {
+    "note": "TYPE 1 - LOOKUP",
+    "question": "What is the value of the physics loss weight lambda?",
+    "source": "btp2_pignn.pdf",
+    "gold_pages": [7]
+  },
+  {
+    "note": "TYPE 2 - PARAPHRASE",
+    "question": "What do the authors admit their method cannot do?",
+    "source": "btp2_pignn.pdf",
+    "gold_pages": [12]
+  },
+  {
+    "note": "ABSTENTION PROBE. Nothing in your corpus can answer this. The system should refuse. Write these about plausible-sounding topics your papers do NOT cover - a question about an unrelated field is too easy.",
+    "question": "What learning rate schedule did the authors use for the transformer baseline?",
+    "unanswerable": true
+  },
+  {
+    "note": "ABSTENTION PROBE - plausible but absent",
+    "question": "How much did the sensor hardware cost?",
+    "unanswerable": true
+  },
+  {
+    "note": "ABSTENTION PROBE - outside the corpus entirely",
+    "question": "What is the authors' view on the 2027 aviation budget?",
+    "unanswerable": true
+  },
+  {
+    "note": "HOW TO USE THIS FILE. Replace every entry above with your own. 'source' must match the PDF filename EXACTLY as indexed. 'gold_pages' are the pages that actually contain the answer, numbered as your PDF reader shows them - the sequential page count, NOT the printed number in the paper's footer. Delete this entry when you are done. Aim for 15-25 answerable questions with a roughly even mix of types 1-4, plus 3-4 abstention probes. Validate with: python scripts/check_questions.py --index <name>",
+    "question": "DELETE THIS ENTRY",
+    "unanswerable": true
+  }
+]

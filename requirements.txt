@@ -1,0 +1,20 @@
+# Core RAG stack
+langchain-google-genai>=2.0.0     # Gemini chat + embeddings via LangChain
+langchain-core>=0.3.0             # Document / message primitives
+faiss-cpu>=1.8.0                  # vector index (numpy fallback if this fails)
+numpy>=1.24
+pypdf>=4.0.0                      # PDF text extraction
+
+# UI
+streamlit>=1.36.0
+
+# Optional: renders the cited PDF page next to each answer.
+# Everything works without it - the page preview simply does not appear.
+pymupdf>=1.24.0
+
+# Config
+python-dotenv>=1.0.0
+
+# Optional, only if you want LangChain's own loaders/vectorstore wrappers:
+# langchain>=0.3.0
+# langchain-community>=0.3.0

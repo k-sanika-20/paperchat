@@ -1,0 +1,17 @@
+.env
+storage/
+data/pdfs/*.pdf
+eval/questions.json
+eval/results*.json
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.streamlit/secrets.toml
+.streamlit/secrets.toml.local
+
+# Personal prep material - keep it off a repo a reviewer will open
+CV_BULLETS.md
+DEPLOY.md
+NOTES.md
