@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""Validate an evaluation question set against a built index.
-
-Run this BEFORE scripts/evaluate.py. It makes no API calls, so it is free
-and instant, and it catches the mistakes that would otherwise look like a
-broken retriever:
-
-  - a source filename that does not match any indexed document
-  - a gold page beyond the end of that document
-  - a gold page that produced NO chunks (a figure-only or near-empty page).
-    Retrieval can never return such a page, so recall for that question is
-    capped at zero no matter how good the system is. This is the one that
-    wastes an afternoon.
-
-It also sanity-checks the shape of the set: enough questions, enough
-unanswerable probes, and coverage spread across your documents.
-
-    python scripts/check_questions.py --index thesis
-"""
+#Validate an evaluation question set against a built index.
 from __future__ import annotations
 
 import argparse
