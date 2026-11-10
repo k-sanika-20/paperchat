@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-"""List the Gemini models your key can actually reach.
-
-Model IDs change and Google retires them for new keys without warning, so
-this is the tool to reach for whenever you see a 404 NOT_FOUND.
-
-Works with either Google SDK: `google-genai` (new, what langchain-google-genai
-4.x installs) or `google-generativeai` (older).
-"""
 from __future__ import annotations
 
 import sys
