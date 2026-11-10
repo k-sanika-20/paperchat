@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sweep the fusion weight and see where hybrid retrieval actually helps.
+"""Sweeping the fusion weight and seeing where hybrid retrieval actually helps.
 
 Reciprocal Rank Fusion blends two rankings:
 
