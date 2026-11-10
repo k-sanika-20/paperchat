@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-"""CLI indexer.
-
-    python scripts/build_index.py data/pdfs/*.pdf --name thesis
-"""
 from __future__ import annotations
 
 import argparse
