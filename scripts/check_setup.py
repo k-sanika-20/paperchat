@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Pre-flight check. Run this first - it tells you exactly what is missing."""
 from __future__ import annotations
 
 import importlib
